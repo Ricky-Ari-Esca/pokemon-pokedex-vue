@@ -1,44 +1,19 @@
-# pokedex-vue
+# Pokédex con Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicación web inspirada en una Pokédex, desarrollada con Vue 3 y Vite como proyecto de práctica.
 
-## Recommended IDE Setup
+## 🛠️ Tecnologías
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Vue 3
+- JavaScript
+- Vite
 
-## Recommended Browser Setup
+## 🚀 Cómo ejecutar el proyecto
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Necesitas tener Node.js instalado.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
+git clone https://github.com/Ricky-Ari-Esca/pokemon-pokedex-vue.git
+cd pokemon-pokedex-vue
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
