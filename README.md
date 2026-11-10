@@ -4,7 +4,7 @@ Aplicación web inspirada en una Pokédex, desarrollada con Vue 3 y Vite como pr
 
 ## 📸 Captura
 
-![Vista de la Pokédex](pokedex.png)
+![Vista de la Pokédex](<img width="1919" height="1166" alt="pokedex" src="https://github.com/user-attachments/assets/f7571d0c-1485-4bb0-916d-c9e97056252d" />)
 
 ## 🛠️ Tecnologías
 
