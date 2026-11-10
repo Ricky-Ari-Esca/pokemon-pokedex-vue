@@ -1,0 +1,609 @@
+/* =========================================
+   MODERN KANTO
+   Sistema de diseño global de la Pokédex
+========================================= */
+
+
+/* =========================================
+   FUENTES
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+
+/* =========================================
+   VARIABLES GLOBALES
+========================================= */
+
+:root {
+
+  /* Colores principales */
+
+  --primary: #BC0100;
+  --primary-bright: #EB0000;
+  --primary-light: #FFDAD4;
+
+  /* Superficies */
+
+  --background: #F9F9F9;
+  --surface: #FFFFFF;
+
+  --surface-lowest: #FFFFFF;
+  --surface-low: #F3F3F4;
+  --surface-container: #EEEEEE;
+  --surface-high: #E8E8E8;
+  --surface-highest: #E2E2E2;
+
+  /* Texto */
+
+  --text: #1A1C1C;
+  --text-secondary: #603E39;
+
+  --text-light: #6B6D6D;
+
+  /* Bordes */
+
+  --border: #EEEEEE;
+  --outline: #956D67;
+  --outline-light: #EBBBB4;
+
+  /* Estados */
+
+  --error: #BA1A1A;
+  --error-light: #FFDAD6;
+
+  /* Radios */
+
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+
+  --shadow-soft:
+    0 10px 30px rgba(0, 0, 0, 0.05);
+
+  --shadow-card:
+    0 4px 15px rgba(0, 0, 0, 0.04);
+
+  --shadow-hover:
+    0 12px 30px rgba(0, 0, 0, 0.08);
+
+  /* Layout */
+
+  --container-width: 1280px;
+
+  --container-padding: 24px;
+
+  --card-gap: 20px;
+
+  --section-margin: 48px;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+  margin: 0;
+
+  min-width: 320px;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-family:
+    'Plus Jakarta Sans',
+    sans-serif;
+
+  color: var(--text);
+
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+========================================= */
+
+h1 {
+
+  font-size: 40px;
+
+  line-height: 48px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+
+}
+
+
+/* =========================================
+   TÍTULO SECUNDARIO
+========================================= */
+
+h2 {
+
+  font-size: 32px;
+
+  line-height: 40px;
+
+  font-weight: 700;
+
+}
+
+
+/* =========================================
+   TÍTULO MEDIANO
+========================================= */
+
+h3 {
+
+  font-size: 24px;
+
+  line-height: 32px;
+
+  font-weight: 600;
+
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+p {
+
+  font-family:
+    'Manrope',
+    sans-serif;
+
+}
+
+
+/* =========================================
+   ETIQUETAS
+========================================= */
+
+.label {
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  line-height: 20px;
+
+  letter-spacing: 0.05em;
+
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.container {
+
+  width: 100%;
+
+  max-width: var(--container-width);
+
+  margin: 0 auto;
+
+  padding-left: var(--container-padding);
+
+  padding-right: var(--container-padding);
+
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+button {
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+}
+
+
+/* =========================================
+   BOTÓN PRINCIPAL
+========================================= */
+
+.btn-primary {
+
+  border: none;
+
+  background:
+    var(--primary);
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: var(--radius);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.btn-primary:hover {
+
+  background:
+    #A80000;
+
+  box-shadow:
+    var(--shadow-soft);
+
+  transform:
+    translateY(-2px);
+
+}
+
+
+.btn-primary:active {
+
+  transform:
+    scale(0.98);
+
+}
+
+
+/* =========================================
+   BOTÓN SECUNDARIO
+========================================= */
+
+.btn-secondary {
+
+  border: 1px solid var(--border);
+
+  background:
+    var(--surface);
+
+  color: var(--text);
+
+  padding: 12px 20px;
+
+  border-radius: var(--radius);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    all 0.2s ease;
+
+}
+
+
+.btn-secondary:hover {
+
+  background:
+    var(--surface-container);
+
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.card {
+
+  background:
+    var(--surface);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-card);
+
+}
+
+
+/* =========================================
+   TARJETA INTERACTIVA
+========================================= */
+
+.card-interactive {
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+
+.card-interactive:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    var(--shadow-hover);
+
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+input {
+
+  font-family:
+    'Manrope',
+    sans-serif;
+
+}
+
+
+.input {
+
+  width: 100%;
+
+  background:
+    #F5F5F5;
+
+  border:
+    2px solid transparent;
+
+  border-radius:
+    var(--radius-full);
+
+  padding:
+    13px 18px;
+
+  color:
+    var(--text);
+
+  outline: none;
+
+  transition:
+    border 0.2s ease,
+    background 0.2s ease;
+
+}
+
+
+.input:focus {
+
+  background:
+    var(--surface);
+
+  border-color:
+    var(--primary);
+
+}
+
+
+/* =========================================
+   BADGES DE TIPO
+========================================= */
+
+.type-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    5px 12px;
+
+  border-radius:
+    var(--radius-full);
+
+  font-family:
+    'Space Grotesk',
+    sans-serif;
+
+  font-size:
+    12px;
+
+  font-weight:
+    600;
+
+  color:
+    white;
+
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background:
+    var(--surface-container);
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    var(--outline);
+
+  border-radius:
+    var(--radius-full);
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    var(--primary);
+
+}
+
+
+/* =========================================
+   SELECCIÓN DE TEXTO
+========================================= */
+
+::selection {
+
+  background:
+    var(--primary);
+
+  color:
+    white;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+  :root {
+
+    --container-padding: 16px;
+
+    --card-gap: 16px;
+
+    --section-margin: 32px;
+
+  }
+
+
+  h1 {
+
+    font-size: 28px;
+
+    line-height: 36px;
+
+  }
+
+
+  h2 {
+
+    font-size: 24px;
+
+    line-height: 32px;
+
+  }
+
+
+  h3 {
+
+    font-size: 20px;
+
+    line-height: 28px;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  h1 {
+
+    font-size: 24px;
+
+    line-height: 32px;
+
+  }
+
+
+  .container {
+
+    padding-left: 16px;
+
+    padding-right: 16px;
+
+  }
+
+}
